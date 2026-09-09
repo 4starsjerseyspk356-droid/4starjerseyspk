@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Star Soccer Jersey PK | Premium Sublimation Kits</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: #070707; color: #f4f4f4; overflow-x: hidden; padding-bottom: 90px; }
+        a { text-decoration: none; }
+        ul { list-style: none; }
+
+        /* Announcement Bar */
+        .top-bar { background: linear-gradient(90deg, #000000, #b8860b, #000000); color: #d4af37; text-align: center; padding: 10px 20px; font-size: 13px; font-weight: 700; letter-spacing: 0.5px; border-bottom: 1px solid #d4af37; }
+        .top-bar span.highlight { color: #fff; }
+        .top-bar .wa-number { margin-left: 15px; color: #25d366; font-weight: 800; }
+
+        /* Header */
+        header { background: rgba(10, 10, 10, 0.98); backdrop-filter: blur(10px); border-bottom: 2px solid #d4af37; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 25px rgba(0,0,0,0.9); }
+        .logo-area { display: flex; align-items: center; gap: 15px; }
+        .logo-area img { height: 55px; width: 55px; border-radius: 50%; border: 3px solid #d4af37; object-fit: cover; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); }
+        .logo-info h1 { font-size: 20px; color: #d4af37; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; line-height: 1.2; }
+        .logo-info .support-email { font-size: 12px; color: #bbb; font-weight: 500; letter-spacing: 0.5px; }
+        .logo-info .support-email span { color: #d4af37; }
+        
+        .whatsapp-top { background: #25d366; color: white; padding: 12px 22px; border-radius: 30px; font-weight: 700; font-size: 14px; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); transition: all 0.3s ease; }
+        .whatsapp-top:hover { transform: translateY(-3px) scale(1.02); background: #20ba5a; box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6); }
+
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover; padding: 120px 5%; text-align: center; border-bottom: 4px solid #d4af37; position: relative; }
+        .hero span.badge { background: #d4af37; color: #000; padding: 8px 20px; border-radius: 30px; font-size: 13px; font-weight: 800; text-transform: uppercase; display: inline-block; margin-bottom: 20px; letter-spacing: 1px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.6); }
+        .hero h2 { font-size: 48px; color: #fff; margin-bottom: 20px; font-weight: 800; line-height: 1.2; text-shadow: 0 2px 5px rgba(0,0,0,0.5); }
+        .hero h2 span { color: #d4af37; }
+        .hero p { font-size: 18px; margin-bottom: 40px; color: #eee; max-width: 750px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+        .btn-main { background: #d4af37; color: #000; padding: 18px 45px; font-size: 18px; font-weight: 800; border: none; border-radius: 50px; cursor: pointer; text-decoration: none; display: inline-block; transition: all 0.4s ease; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5); }
+        .btn-main:hover { background: #fff; transform: translateY(-5px) scale(1.05); color: #000; }
+
+        /* Container */
+        .container { max-width: 1200px; margin: 70px auto; padding: 0 20px; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-size: 38px; color: #fff; font-weight: 800; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .section-header h2 span { color: #d4af37; }
+        .section-header p { color: #aaa; font-size: 16px; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+        /* Products Grid */
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .product-card { background: #111; border: 1px solid #222; border-radius: 16px; overflow: hidden; transition: all 0.4s ease; position: relative; box-shadow: 0 15px 40px rgba(0,0,0,0.6); display: flex; flex-direction: column; }
+        .product-card:hover { border-color: #d4af37; transform: translateY(-10px); box-shadow: 0 20px 50px rgba(212, 175, 55, 0.2); }
+        
+        .tag-sale { position: absolute; top: 15px; left: 15px; background: linear-gradient(45deg, #ff416c, #ff4b2b); color: #fff; padding: 6px 14px; font-size: 11px; font-weight: 800; border-radius: 30px; z-index: 2; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .product-img-box { height: 280px; background: #1a1a1a; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #333; }
+        .product-img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+        .product-card:hover .product-img-box img { transform: scale(1.1); }
+
+        .product-details { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+        .category-name { font-size: 11px; color: #d4af37; text-transform: uppercase; font-weight: 700; margin-bottom: 8px; letter-spacing: 1px; }
+        .product-details h3 { font-size: 20px; margin-bottom: 15px; color: #fff; font-weight: 700; line-height: 1.4; }
+        
+        .price-box { display: flex; align-items: baseline; gap: 12px; margin-bottom: 25px; margin-top: auto; }
+        .price { font-size: 28px; color: #d4af37; font-weight: 900; }
+        .old-price { font-size: 15px; color: #777; text-decoration: line-through; font-weight: 500; }
+
+        .btn-wa { display: flex; align-items: center; justify-content: center; gap: 10px; background: #25d366; color: white; text-align: center; padding: 16px; border-radius: 10px; text-decoration: none; font-weight: 800; font-size: 16px; transition: all 0.3s ease; box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3); text-transform: uppercase; letter-spacing: 0.5px; }
+        .btn-wa:hover { background: #20ba5a; transform: translateY(-3px) scale(1.01); box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5); }
+
+        /* Trust Badges */
+        .features-section { background: #111; border-top: 2px solid #333; border-bottom: 2px solid #333; padding: 70px 5%; margin-top: 100px; }
+        .features-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; text-align: center; }
+        .feature-box h4 { color: #d4af37; font-size: 20px; margin-bottom: 10px; font-weight: 700; }
+        .feature-box p { color: #999; font-size: 15px; line-height: 1.6; }
+
+        /* Footer */
+        footer { background: #050505; text-align: center; padding: 50px 5%; border-top: 1px solid #222; color: #888; font-size: 14px; line-height: 1.8; }
+        footer span { color: #d4af37; font-weight: 700; }
+        footer .contact-info-footer { margin-top: 15px; font-size: 15px; color: #fff; }
+        footer .contact-info-footer a { color: #d4af37; text-decoration: underline; }
+
+        /* Floating WhatsApp Button */
+        .floating-wa { position: fixed; bottom: 30px; right: 30px; z-index: 9999; }
+        .floating-wa-link { background: #25d366; color: white; width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; box-shadow: 0 8px 30px rgba(37, 211, 102, 0.7); transition: all 0.4s ease; text-decoration: none; }
+        .floating-wa-link:hover { transform: translateY(-5px) scale(1.1); background: #20ba5a; }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        🔥 Pakistan’s #1 Sublimation Jerseys | Direct Factory Wholesale Prices | <span class="highlight">Order Now!</span> <span class="wa-number">📞 03224312356</span>
+    </div>
+
+    <header>
+        <div class="logo-area">
+            <img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&w=150&q=80" alt="4 Star Soccer Logo">
+            <div class="logo-info">
+                <h1>4 Star Soccer PK</h1>
+                <div class="support-email">Official Email: <span>4starsoccerpk@gmail.com</span></div>
+            </div>
+        </div>
+        <a href="https://wa.me/923224312356?text=Assalam-o-Alaikum,%20I%20want%20to%20order%20jerseys%20from%204starjerseyspk.com" class="whatsapp-top" target="_blank">
+            💬 Quick WhatsApp
+        </a>
+    </header>
+
+    <section class="hero">
+        <span class="badge">⭐ Premium Quality Sublimation Printing</span>
+        <h2>Play Like a Pro. <span>Wear the Best.</span></h2>
+        <p>Direct manufacturing se aapke ghar tak. Top-notch fabric, vibrant colors jo kabhi fade nahi hotay, aur market se sab se kam qeemat par!</p>
+        <a href="https://wa.me/923224312356?text=Hello,%20I%20want%20to%20explore%20and%20order%20soccer%20jerseys." class="btn-main" target="_blank">Order on WhatsApp Now 📲</a>
+    </section>
+
+    <div class="container">
+        <div class="section-header">
+            <h2>Featured <span>Football Kits</span></h2>
+            <p>Apni pasand ki jersey select karein aur aik click par WhatsApp par order confirm karein!</p>
+        </div>
+        
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <span class="tag-sale">BEST SELLER</span>
+                <div class="product-img-box">
+                    <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=600&q=80" alt="Real Madrid Kit">
+                </div>
+                <div class="product-details">
+                    <div class="category-name">European Club Kit</div>
+                    <h3>Real Madrid Home Kit 2026</h3>
+                    <div class="price-box">
+                        <span class="price">Rs. 1,599</span>
+                        <span class="old-price">Rs. 2,200</span>
+                    </div>
+                    <a href="https://wa.me/923224312356?text=Salam,%20I%20want%20to%20order%20Real%20Madrid%20Home%20Kit%202026%20(Rs.%201599)" class="btn-wa" target="_blank">
+                        Order via WhatsApp 📲
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <span class="tag-sale">HOT ITEM</span>
+                <div class="product-img-box">
+                    <img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&w=600&q=80" alt="Pakistan National Kit">
+                </div>
+                <div class="product-details">
+                    <div class="category-name">National Pride Kit</div>
+                    <h3>Pakistan National Home Kit</h3>
+                    <div class="price-box">
+                        <span class="price">Rs. 1,599</span>
+                        <span class="old-price">Rs. 2,200</span>
+                    </div>
+                    <a href="https://wa.me/923224312356?text=Salam,%20I%20want%20to%20order%20Pakistan%20National%20Home%20Kit%20(Rs.%201599)" class="btn-wa" target="_blank">
+                        Order via WhatsApp 📲
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <span class="tag-sale">CUSTOM</span>
+                <div class="product-img-box">
+                    <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=600&q=80" alt="Custom Academy Kit">
+                </div>
+                <div class="product-details">
+                    <div class="category-name">Clubs & Academies</div>
+                    <h3>Custom Team / Academy Kit</h3>
+                    <div class="price-box">
+                        <span class="price">Rs. 1,599</span>
+                        <span class="old-price">Bulk Discount</span>
+                    </div>
+                    <a href="https://wa.me/923224312356?text=Salam,%20I%20want%20to%20place%20a%20Custom%20Club/Academy%20Kit%20order." class="btn-wa" target="_blank">
+                        Order via WhatsApp 📲
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trust Features -->
+    <div class="features-section">
+        <div class="features-grid">
+            <div class="feature-box">
+                <h4>⭐ Premium Sublimation</h4>
+                <p>100% color guarantee, kabhi print kharab ya fade nahi hoga.</p>
+            </div>
+            <div class="feature-box">
+                <h4>🇵🇰 Direct Manufacturer</h4>
+                <p>Bina kisi middle-man ke direct factory wholesale rates par.</p>
+            </div>
+            <div class="feature-box">
+                <h4>⚡ Fast WhatsApp Support</h4>
+                <p>Order dena ab WhatsApp par sirf aik click ki doori par hai.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 <span>4starjerseyspk.com</span>. All Rights Reserved.</p>
+        <div class="contact-info-footer">
+            Official Support Email: <a href="mailto:4starsoccerpk@gmail.com">4starsoccerpk@gmail.com</a> | WhatsApp: 03224312356
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Icon -->
+    <div class="floating-wa">
+        <a href="https://wa.me/923224312356?text=Assalam-o-Alaikum,%20I%20visited%204starjerseyspk.com%20and%20want%20to%20order." class="floating-wa-link" target="_blank" title="Chat on WhatsApp">
+            💬
+        </a>
+    </div>
+
+</body>
+</html>
