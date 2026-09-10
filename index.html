@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4 STAR SOCCER PK | Official Soccer Kits & Sublimation Jerseys</title>
+    <!-- Website Favicon / Profile Logo -->
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -67,34 +69,45 @@
             gap: 12px;
         }
 
-        .logo-area img {
-            width: 45px;
-            height: 45px;
+        .logo-wrapper {
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             border: 2px solid var(--gold);
-            object-fit: cover;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000;
+        }
+
+        .logo-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #000;
         }
 
         .logo-text h1 {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 800;
             color: var(--gold-light);
             letter-spacing: 1px;
         }
 
         .logo-text p {
-            font-size: 11px;
+            font-size: 10px;
             color: var(--text-gray);
         }
 
         .whatsapp-btn-top {
             background-color: var(--accent);
             color: white;
-            padding: 10px 20px;
+            padding: 10px 18px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 14px;
+            font-size: 13px;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -110,15 +123,15 @@
         /* Hero Section */
         .hero {
             text-align: center;
-            padding: 60px 20px 40px 20px;
+            padding: 50px 20px 30px 20px;
             background: radial-gradient(circle at center, #1f1b0c 0%, var(--bg-dark) 70%);
             border-bottom: 1px solid rgba(212, 175, 55, 0.1);
         }
 
         .hero h2 {
-            font-size: clamp(28px, 5vw, 48px);
+            font-size: clamp(26px, 4vw, 42px);
             font-weight: 900;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             text-transform: uppercase;
         }
 
@@ -128,11 +141,11 @@
         }
 
         .hero p {
-            font-size: clamp(14px, 2vw, 16px);
+            font-size: clamp(13px, 2vw, 15px);
             color: var(--text-gray);
             max-width: 700px;
-            margin: 0 auto 30px auto;
-            line-height: 1.6;
+            margin: 0 auto 20px auto;
+            line-height: 1.5;
         }
 
         .badge-pill {
@@ -140,12 +153,12 @@
             background: rgba(212, 175, 55, 0.1);
             color: var(--gold);
             border: 1px solid var(--gold);
-            padding: 6px 16px;
+            padding: 5px 14px;
             border-radius: 20px;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 700;
             text-transform: uppercase;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             letter-spacing: 1px;
         }
 
@@ -153,16 +166,16 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 50px 20px;
+            padding: 40px 20px;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .section-title h3 {
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 800;
             text-transform: uppercase;
             color: var(--text-light);
@@ -175,49 +188,50 @@
 
         .section-title p {
             color: var(--text-gray);
-            font-size: 14px;
-            margin-top: 8px;
+            font-size: 13px;
+            margin-top: 6px;
         }
 
-        /* Team Folders / Categories Section */
+        /* Team Folders Grid */
         .folders-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
             margin-bottom: 50px;
         }
 
         .folder-card {
-            background: linear-gradient(135deg, #1a1a1a, #111);
+            background: linear-gradient(135deg, #181818, #0d0d0d);
             border: 1px solid rgba(212, 175, 55, 0.2);
             border-radius: 10px;
-            padding: 20px;
+            padding: 18px 12px;
             text-align: center;
             cursor: pointer;
             transition: all 0.3s ease;
         }
 
-        .folder-card:hover {
+        .folder-card:hover, .folder-card.active {
             border-color: var(--gold);
+            background: linear-gradient(135deg, #252210, #141414);
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.2);
         }
 
         .folder-card i {
-            font-size: 36px;
+            font-size: 28px;
             color: var(--gold);
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .folder-card h4 {
-            font-size: 18px;
+            font-size: 15px;
             font-weight: 700;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
             color: var(--text-light);
         }
 
         .folder-card p {
-            font-size: 12px;
+            font-size: 11px;
             color: var(--text-gray);
         }
 
@@ -273,8 +287,20 @@
         .product-title {
             font-size: 18px;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             color: var(--text-light);
+        }
+
+        .player-badge {
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--gold-light);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 12px;
+            border-left: 3px solid var(--gold);
         }
 
         .product-features {
@@ -369,17 +395,19 @@
 
     <!-- Announcement Bar -->
     <div class="announcement-bar">
-        🔥 Pakistan’s #1 Official Soccer Kits Platform | Direct Factory Wholesale Prices | Order via WhatsApp: 03224312356
+        🔥 Pakistan’s #1 Official Soccer Kits Platform | Star Players Printing Available | Order via WhatsApp: 03224312356
     </div>
 
     <!-- Header -->
     <header>
         <div class="nav-container">
             <div class="logo-area">
-                <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=150&q=80" alt="4 Star Soccer PK">
+                <div class="logo-wrapper">
+                    <img src="logo.jpg" alt="4 Star Soccer PK Logo">
+                </div>
                 <div class="logo-text">
                     <h1>4 STAR SOCCER PK</h1>
-                    <p>Official Club & National Folders</p>
+                    <p>Official Team Folders</p>
                 </div>
             </div>
             <a href="https://wa.me/923224312356?text=Hi%204%20Star%20Soccer%20PK,%20I%20want%20to%20order%20kits." target="_blank" class="whatsapp-btn-top">
@@ -390,9 +418,9 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="badge-pill">★ Premium Team Folders & Sublimation Kits</div>
-        <h2>Select Your Team. <span>Explore All Kits.</span></h2>
-        <p>Real Madrid, Juventus, Manchester United, AC Milan, aur saari trending teams ke folders yahan available hain. Har kit ka mockup dekhein aur foran order karein!</p>
+        <div class="badge-pill">★ Premium Star Player Kits & Sublimation Range</div>
+        <h2>Select Your Team. <span>Explore Star Editions.</span></h2>
+        <p>Mbappé, Ronaldo, Messi, Lamine Yamal, Haaland aur tamam legendary players ki custom name & number kits ab available hain!</p>
     </section>
 
     <!-- Main Container -->
@@ -401,162 +429,150 @@
         <!-- Team Folders / Categories Section -->
         <div class="section-title">
             <h3>Explore By <span>Team Folders</span></h3>
-            <p>Apni pasand ki team ka folder select karein</p>
+            <p>Kisi bhi folder par click karke uski specific kits dekhein</p>
         </div>
 
         <div class="folders-grid">
-            <div class="folder-card">
-                <i class="fas fa-shield-alt"></i>
-                <h4>Real Madrid Folder</h4>
-                <p>Home, Away & Third Kits</p>
+            <div class="folder-card active" onclick="filterCategory('all', this)">
+                <i class="fas fa-folder-open"></i>
+                <h4>All Kits</h4>
+                <p>Complete Range</p>
             </div>
-            <div class="folder-card">
+            <div class="folder-card" onclick="filterCategory('realmadrid', this)">
                 <i class="fas fa-shield-alt"></i>
-                <h4>Juventus Folder</h4>
-                <p>Home & Classic Editions</p>
+                <h4>Real Madrid</h4>
+                <p>Mbappé #10 Edition</p>
             </div>
-            <div class="folder-card">
+            <div class="folder-card" onclick="filterCategory('barcelona', this)">
                 <i class="fas fa-shield-alt"></i>
-                <h4>Manchester United</h4>
-                <p>Red Devils Full Kit Range</p>
+                <h4>Barcelona</h4>
+                <p>Yamal & Messi</p>
             </div>
-            <div class="folder-card">
+            <div class="folder-card" onclick="filterCategory('juventus', this)">
                 <i class="fas fa-shield-alt"></i>
-                <h4>AC Milan Folder</h4>
-                <p>Retro & Modern Sublimation</p>
+                <h4>Juventus</h4>
+                <p>Ronaldo Classic</p>
             </div>
-            <div class="folder-card">
+            <div class="folder-card" onclick="filterCategory('mancity', this)">
+                <i class="fas fa-shield-alt"></i>
+                <h4>Manchester City</h4>
+                <p>Haaland #9 Edition</p>
+            </div>
+            <div class="folder-card" onclick="filterCategory('national', this)">
                 <i class="fas fa-globe"></i>
                 <h4>National Teams</h4>
-                <p>Portugal, Argentina, Brazil</p>
+                <p>Portugal & Argentina</p>
             </div>
         </div>
 
         <!-- Products / Kits Section -->
-        <div class="section-title" style="margin-top: 60px;">
-            <h3>Featured <span>Kit Mockups</span></h3>
+        <div class="section-title" style="margin-top: 50px;">
+            <h3>Top Selling <span>Star Kits</span></h3>
             <p>Aik click par WhatsApp par order confirm karein!</p>
         </div>
 
-        <div class="products-grid">
+        <div class="products-grid" id="productGrid">
             
-            <!-- Real Madrid -->
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&w=600&q=80" alt="Real Madrid Home Kit" class="product-image">
+            <!-- Real Madrid - Mbappé -->
+            <div class="product-card" data-category="realmadrid">
+                <img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&w=600&q=80" alt="Real Madrid Mbappé Kit" class="product-image">
                 <div class="product-info">
                     <div>
                         <div class="product-tag">Real Madrid Folder • Home Kit</div>
-                        <h4 class="product-title">Real Madrid 26/27 Home Kit</h4>
+                        <h4 class="product-title">Real Madrid Official Kit</h4>
+                        <div class="player-badge"><i class="fas fa-star"></i> Star Print: MBAPPÉ - 10</div>
                         <ul class="product-features">
-                            <li>✓ Official Crest & Embroidery</li>
+                            <li>✓ Official Crest & Sublimation Design</li>
                             <li>✓ High-Performance Dri-FIT Fabric</li>
                             <li>✓ Sizes: S, M, L, XL available</li>
                         </ul>
                     </div>
                     <div class="product-footer">
                         <span class="price">Rs. 2,499</span>
-                        <a href="https://wa.me/923224312356?text=Assalam-o-Alaikum,%20I%20want%20to%20order%20Real%20Madrid%2026/27%20Home%20Kit." target="_blank" class="order-btn">
+                        <a href="https://wa.me/923224312356?text=Assalam-o-Alaikum,%20I%20want%20to%20order%20Real%20Madrid%20Kit%20with%20MBAPPE%2010." target="_blank" class="order-btn">
                             <i class="fab fa-whatsapp"></i> Order Now
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Juventus -->
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=600&q=80" alt="Juventus Kit" class="product-image">
+            <!-- Barcelona - Lamine Yamal -->
+            <div class="product-card" data-category="barcelona">
+                <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=600&q=80" alt="Barcelona Yamal Kit" class="product-image">
                 <div class="product-info">
                     <div>
-                        <div class="product-tag">Juventus Folder • Home Kit</div>
-                        <h4 class="product-title">Juventus Official Black & White</h4>
+                        <div class="product-tag">Barcelona Folder • Home Kit</div>
+                        <h4 class="product-title">FC Barcelona Blaugrana Kit</h4>
+                        <div class="player-badge"><i class="fas fa-star"></i> Star Print: L. YAMAL - 19</div>
                         <ul class="product-features">
-                            <li>✓ Modern Minimalist Design</li>
+                            <li>✓ Classic Blaugrana Sublimation</li>
+                            <li>✓ Pro Player Edition Material</li>
+                            <li>✓ Sizes: S, M, L, XL available</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <span class="price">Rs. 2,499</span>
+                        <a href="https://wa.me/923224312356?text=Assalam-o-Alaikum,%20I%20want%20to%20order%20Barcelona%20Kit%20with%20L.%20YAMAL%2019." target="_blank" class="order-btn">
+                            <i class="fab fa-whatsapp"></i> Order Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Juventus - Ronaldo -->
+            <div class="product-card" data-category="juventus">
+                <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=600&q=80" alt="Juventus Ronaldo Kit" class="product-image">
+                <div class="product-info">
+                    <div>
+                        <div class="product-tag">Juventus Folder • Classic Edition</div>
+                        <h4 class="product-title">Juventus Black & White Kit</h4>
+                        <div class="player-badge"><i class="fas fa-star"></i> Star Print: RONALDO - 7</div>
+                        <ul class="product-features">
+                            <li>✓ Legendary Striped Sublimation</li>
                             <li>✓ Breathable Mesh Paneling</li>
                             <li>✓ Sizes: S, M, L, XL available</li>
                         </ul>
                     </div>
                     <div class="product-footer">
                         <span class="price">Rs. 2,499</span>
-                        <a href="https://wa.me/923224312356?text=Assalam-o-Alaikum,%20I%20want%20to%20order%20Juventus%20Official%20Kit." target="_blank" class="order-btn">
+                        <a href="https://wa.me/923224312356?text=Assalam-o-Alaikum,%20I%20want%20to%20order%20Juventus%20Kit%20with%20RONALDO%207." target="_blank" class="order-btn">
                             <i class="fab fa-whatsapp"></i> Order Now
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Manchester United -->
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=600&q=80" alt="Manchester United Kit" class="product-image">
+            <!-- Manchester City - Haaland -->
+            <div class="product-card" data-category="mancity">
+                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=600&q=80" alt="Manchester City Haaland Kit" class="product-image">
                 <div class="product-info">
                     <div>
-                        <div class="product-tag">Manchester United Folder • Classic</div>
-                        <h4 class="product-title">Manchester United Red Devil Kit</h4>
+                        <div class="product-tag">Manchester City Folder • Home Kit</div>
+                        <h4 class="product-title">Manchester City Sky Blue Kit</h4>
+                        <div class="player-badge"><i class="fas fa-star"></i> Star Print: HAALAND - 9</div>
                         <ul class="product-features">
-                            <li>✓ Iconic Red & Gold Accents</li>
-                            <li>✓ Premium Sublimation Print</li>
+                            <li>✓ Official Sky Blue Sublimation</li>
+                            <li>✓ High-Grade Athletic Fabric</li>
                             <li>✓ Sizes: S, M, L, XL available</li>
                         </ul>
                     </div>
                     <div class="product-footer">
                         <span class="price">Rs. 2,499</span>
-                        <a href="https://wa.me/923224312356?text=Assalam-o-Alaikum,%20I%20want%20to%20order%20Manchester%20United%20Kit." target="_blank" class="order-btn">
+                        <a href="https://wa.me/923224312356?text=Assalam-o-Alaikum,%20I%20want%20to%20order%20Man%20City%20Kit%20with%20HAALAND%209." target="_blank" class="order-btn">
                             <i class="fab fa-whatsapp"></i> Order Now
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- AC Milan -->
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=600&q=80" alt="AC Milan Kit" class="product-image">
-                <div class="product-info">
-                    <div>
-                        <div class="product-tag">AC Milan Folder • Retro Edition</div>
-                        <h4 class="product-title">AC Milan Classic 2007 Style</h4>
-                        <ul class="product-features">
-                            <li>✓ Legendary Rossoneri Stripes</li>
-                            <li>✓ Ultra-Soft Retro Fabric</li>
-                            <li>✓ Sizes: S, M, L, XL available</li>
-                        </ul>
-                    </div>
-                    <div class="product-footer">
-                        <span class="price">Rs. 2,599</span>
-                        <a href="https://wa.me/923224312356?text=Assalam-o-Alaikum,%20I%20want%20to%20order%20AC%20Milan%20Classic%20Kit." target="_blank" class="order-btn">
-                            <i class="fab fa-whatsapp"></i> Order Now
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Portugal National Team -->
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?auto=format&fit=crop&w=600&q=80" alt="Portugal Kit" class="product-image">
-                <div class="product-info">
-                    <div>
-                        <div class="product-tag">National Teams Folder • Trending</div>
-                        <h4 class="product-title">Portugal Home Official Kit</h4>
-                        <ul class="product-features">
-                            <li>✓ Vibrant Maroon & Gold</li>
-                            <li>✓ Sweat-Wicking Tech Fabric</li>
-                            <li>✓ Sizes: S, M, L, XL available</li>
-                        </ul>
-                    </div>
-                    <div class="product-footer">
-                        <span class="price">Rs. 2,499</span>
-                        <a href="https://wa.me/923224312356?text=Assalam-o-Alaikum,%20I%20want%20to%20order%20Portugal%20Home%20Kit." target="_blank" class="order-btn">
-                            <i class="fab fa-whatsapp"></i> Order Now
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Argentina National Team -->
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=600&q=80" alt="Argentina Kit" class="product-image">
+            <!-- Argentina - Messi -->
+            <div class="product-card" data-category="national">
+                <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=600&q=80" alt="Argentina Messi Kit" class="product-image">
                 <div class="product-info">
                     <div>
                         <div class="product-tag">National Teams Folder • Champions</div>
                         <h4 class="product-title">Argentina 3-Star Champion Kit</h4>
+                        <div class="player-badge"><i class="fas fa-star"></i> Star Print: MESSI - 10</div>
                         <ul class="product-features">
                             <li>✓ Sky Blue & White Stripes</li>
                             <li>✓ Official 3-Star Gold Crest</li>
@@ -565,7 +581,30 @@
                     </div>
                     <div class="product-footer">
                         <span class="price">Rs. 2,699</span>
-                        <a href="https://wa.me/923224312356?text=Assalam-o-Alaikum,%20I%20want%20to%20order%20Argentina%203-Star%20Kit." target="_blank" class="order-btn">
+                        <a href="https://wa.me/923224312356?text=Assalam-o-Alaikum,%20I%20want%20to%20order%20Argentina%20Kit%20with%20MESSI%2010." target="_blank" class="order-btn">
+                            <i class="fab fa-whatsapp"></i> Order Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portugal - Ronaldo -->
+            <div class="product-card" data-category="national">
+                <img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?auto=format&fit=crop&w=600&q=80" alt="Portugal Ronaldo Kit" class="product-image">
+                <div class="product-info">
+                    <div>
+                        <div class="product-tag">National Teams Folder • Trending</div>
+                        <h4 class="product-title">Portugal Home Official Kit</h4>
+                        <div class="player-badge"><i class="fas fa-star"></i> Star Print: CRISTIANO - 7</div>
+                        <ul class="product-features">
+                            <li>✓ Vibrant Maroon & Gold</li>
+                            <li>✓ Sweat-Wicking Tech Fabric</li>
+                            <li>✓ Sizes: S, M, L, XL available</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <span class="price">Rs. 2,499</span>
+                        <a href="https://wa.me/923224312356?text=Assalam-o-Alaikum,%20I%20want%20to%20order%20Portugal%20Kit%20with%20CRISTIANO%207." target="_blank" class="order-btn">
                             <i class="fab fa-whatsapp"></i> Order Now
                         </a>
                     </div>
@@ -585,6 +624,24 @@
     <a href="https://wa.me/923224312356?text=Hi%204%20Star%20Soccer%20PK,%20I%20need%20help%20with%20custom%20kit%20ordering." target="_blank" class="whatsapp-float">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <!-- JavaScript for Folder Filtering -->
+    <script>
+        function filterCategory(category, element) {
+            const folders = document.querySelectorAll('.folder-card');
+            folders.forEach(f => f.classList.remove('active'));
+            element.classList.add('active');
+
+            const products = document.querySelectorAll('.product-card');
+            products.forEach(product => {
+                if (category === 'all' || product.getAttribute('data-category') === category) {
+                    product.style.display = 'flex';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>
