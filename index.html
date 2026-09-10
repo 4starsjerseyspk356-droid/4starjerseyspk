@@ -202,37 +202,73 @@
 
         .folder-card {
             background: linear-gradient(135deg, #181818, #0d0d0d);
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            border-radius: 10px;
-            padding: 18px 12px;
+            border: 2px solid rgba(212, 175, 55, 0.2);
+            border-radius: 12px;
+            padding: 20px 15px;
             text-align: center;
             cursor: pointer;
             transition: all 0.3s ease;
+            position: relative;
         }
 
-        .folder-card:hover, .folder-card.active {
+        .folder-card:hover {
             border-color: var(--gold);
             background: linear-gradient(135deg, #252210, #141414);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.2);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.25);
+        }
+
+        .folder-card.active {
+            border-color: var(--gold);
+            background: linear-gradient(135deg, #302a10, #1a1a1a);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
         }
 
         .folder-card i {
-            font-size: 28px;
+            font-size: 32px;
             color: var(--gold);
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            transition: transform 0.3s;
+        }
+
+        .folder-card:hover i, .folder-card.active i {
+            transform: scale(1.1);
         }
 
         .folder-card h4 {
             font-size: 15px;
             font-weight: 700;
-            margin-bottom: 4px;
+            margin-bottom: 5px;
             color: var(--text-light);
         }
 
         .folder-card p {
             font-size: 11px;
             color: var(--text-gray);
+        }
+
+        /* Active Folder Indicator Status */
+        .active-folder-banner {
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 4px solid var(--gold);
+            padding: 12px 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .active-folder-banner span {
+            color: var(--gold-light);
+            font-weight: 700;
+            font-size: 15px;
+            text-transform: uppercase;
+        }
+
+        .active-folder-banner small {
+            color: var(--text-gray);
+            font-size: 12px;
         }
 
         /* Products Grid */
@@ -426,47 +462,56 @@
     <!-- Main Container -->
     <div class="container">
 
-        <!-- Team Folders / Categories Section -->
+        <!-- Team Folders Section -->
         <div class="section-title">
             <h3>Explore By <span>Team Folders</span></h3>
-            <p>Kisi bhi folder par click karke uski specific kits dekhein</p>
+            <p>Kisi bhi folder par click karein aur us team ki special kits dekhein</p>
         </div>
 
         <div class="folders-grid">
-            <div class="folder-card active" onclick="filterCategory('all', this)">
+            <div class="folder-card active" id="folder-all" onclick="openFolder('all', 'All Kits - Complete Range', this)">
                 <i class="fas fa-folder-open"></i>
                 <h4>All Kits</h4>
                 <p>Complete Range</p>
             </div>
-            <div class="folder-card" onclick="filterCategory('realmadrid', this)">
-                <i class="fas fa-shield-alt"></i>
+            <div class="folder-card" id="folder-realmadrid" onclick="openFolder('realmadrid', 'Real Madrid Folder (Mbappé #10 Edition)', this)">
+                <i class="fas fa-folder"></i>
                 <h4>Real Madrid</h4>
                 <p>Mbappé #10 Edition</p>
             </div>
-            <div class="folder-card" onclick="filterCategory('barcelona', this)">
-                <i class="fas fa-shield-alt"></i>
+            <div class="folder-card" id="folder-barcelona" onclick="openFolder('barcelona', 'Barcelona Folder (Yamal & Messi)', this)">
+                <i class="fas fa-folder"></i>
                 <h4>Barcelona</h4>
                 <p>Yamal & Messi</p>
             </div>
-            <div class="folder-card" onclick="filterCategory('juventus', this)">
-                <i class="fas fa-shield-alt"></i>
+            <div class="folder-card" id="folder-juventus" onclick="openFolder('juventus', 'Juventus Folder (Ronaldo Classic)', this)">
+                <i class="fas fa-folder"></i>
                 <h4>Juventus</h4>
                 <p>Ronaldo Classic</p>
             </div>
-            <div class="folder-card" onclick="filterCategory('mancity', this)">
-                <i class="fas fa-shield-alt"></i>
+            <div class="folder-card" id="folder-mancity" onclick="openFolder('mancity', 'Manchester City Folder (Haaland #9)', this)">
+                <i class="fas fa-folder"></i>
                 <h4>Manchester City</h4>
                 <p>Haaland #9 Edition</p>
             </div>
-            <div class="folder-card" onclick="filterCategory('national', this)">
-                <i class="fas fa-globe"></i>
+            <div class="folder-card" id="folder-national" onclick="openFolder('national', 'National Teams Folder (Portugal & Argentina)', this)">
+                <i class="fas fa-folder"></i>
                 <h4>National Teams</h4>
                 <p>Portugal & Argentina</p>
             </div>
         </div>
 
+        <!-- Active Folder Status Banner -->
+        <div class="active-folder-banner">
+            <div>
+                <small>Currently Open Folder:</small>
+                <div><span id="currentFolderName">All Kits - Complete Range</span></div>
+            </div>
+            <i class="fas fa-folder-open" style="color: var(--gold); font-size: 24px;"></i>
+        </div>
+
         <!-- Products / Kits Section -->
-        <div class="section-title" style="margin-top: 50px;">
+        <div class="section-title" style="margin-top: 30px;">
             <h3>Top Selling <span>Star Kits</span></h3>
             <p>Aik click par WhatsApp par order confirm karein!</p>
         </div>
@@ -625,13 +670,25 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- JavaScript for Folder Filtering -->
+    <!-- JavaScript for Open Folder Logic -->
     <script>
-        function filterCategory(category, element) {
+        function openFolder(category, folderName, element) {
+            // Update active folder styling
             const folders = document.querySelectorAll('.folder-card');
-            folders.forEach(f => f.classList.remove('active'));
-            element.classList.add('active');
+            folders.forEach(f => {
+                f.classList.remove('active');
+                const icon = f.querySelector('i');
+                icon.className = "fas fa-folder";
+            });
 
+            element.classList.add('active');
+            const activeIcon = element.querySelector('i');
+            activeIcon.className = "fas fa-folder-open";
+
+            // Update folder banner text
+            document.getElementById('currentFolderName').innerText = folderName;
+
+            // Filter products
             const products = document.querySelectorAll('.product-card');
             products.forEach(product => {
                 if (category === 'all' || product.getAttribute('data-category') === category) {
