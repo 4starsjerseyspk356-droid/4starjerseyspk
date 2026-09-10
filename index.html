@@ -197,7 +197,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
             gap: 15px;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .folder-card {
@@ -208,7 +208,6 @@
             text-align: center;
             cursor: pointer;
             transition: all 0.3s ease;
-            position: relative;
         }
 
         .folder-card:hover {
@@ -247,11 +246,11 @@
             color: var(--text-gray);
         }
 
-        /* Active Folder Indicator Status */
+        /* Active Folder Banner */
         .active-folder-banner {
             background: rgba(212, 175, 55, 0.1);
             border-left: 4px solid var(--gold);
-            padding: 12px 20px;
+            padding: 15px 20px;
             border-radius: 6px;
             margin-bottom: 30px;
             display: flex;
@@ -262,7 +261,7 @@
         .active-folder-banner span {
             color: var(--gold-light);
             font-weight: 700;
-            font-size: 15px;
+            font-size: 16px;
             text-transform: uppercase;
         }
 
@@ -431,7 +430,7 @@
 
     <!-- Announcement Bar -->
     <div class="announcement-bar">
-        🔥 Pakistan’s #1 Official Soccer Kits Platform | Star Players Printing Available | Order via WhatsApp: 03224312356
+        🔥 Pakistan’s #1 Official Soccer Kits Platform | Sublimation Mockups & Star Printing | WhatsApp: 03224312356
     </div>
 
     <!-- Header -->
@@ -446,7 +445,7 @@
                     <p>Official Team Folders</p>
                 </div>
             </div>
-            <a href="https://wa.me/923224312356?text=Hi%204%20Star%20Soccer%20PK,%20I%20want%20to%20order%20kits." target="_blank" class="whatsapp-btn-top">
+            <a href="https://wa.me/923224312356?text=Hi%204%20Star%20Soccer%20PK,%20I%20want%20to%20order%20custom%20kits." target="_blank" class="whatsapp-btn-top">
                 <i class="fab fa-whatsapp"></i> Quick WhatsApp
             </a>
         </div>
@@ -454,9 +453,9 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="badge-pill">★ Premium Star Player Kits & Sublimation Range</div>
-        <h2>Select Your Team. <span>Explore Star Editions.</span></h2>
-        <p>Mbappé, Ronaldo, Messi, Lamine Yamal, Haaland aur tamam legendary players ki custom name & number kits ab available hain!</p>
+        <div class="badge-pill">★ Premium Sublimation Jerseys & Team Mockups</div>
+        <h2>Select Your Team Folder. <span>Explore All Mockups.</span></h2>
+        <p>Real Madrid, Barcelona, Juventus, Manchester City aur National Teams ke tamam latest mockups aur star player kits yahan available hain!</p>
     </section>
 
     <!-- Main Container -->
@@ -465,94 +464,112 @@
         <!-- Team Folders Section -->
         <div class="section-title">
             <h3>Explore By <span>Team Folders</span></h3>
-            <p>Kisi bhi folder par click karein aur us team ki special kits dekhein</p>
+            <p>Folder par click karein aur andar ke tamam mockups dekhein</p>
         </div>
 
         <div class="folders-grid">
-            <div class="folder-card active" id="folder-all" onclick="openFolder('all', 'All Kits - Complete Range', this)">
+            <div class="folder-card active" id="folder-all" onclick="openFolder('all', 'All Folders Kits - Complete Range', this)">
                 <i class="fas fa-folder-open"></i>
                 <h4>All Kits</h4>
                 <p>Complete Range</p>
             </div>
-            <div class="folder-card" id="folder-realmadrid" onclick="openFolder('realmadrid', 'Real Madrid Folder (Mbappé #10 Edition)', this)">
+            <div class="folder-card" id="folder-realmadrid" onclick="openFolder('realmadrid', 'Real Madrid Folder Mockups', this)">
                 <i class="fas fa-folder"></i>
                 <h4>Real Madrid</h4>
-                <p>Mbappé #10 Edition</p>
+                <p>Mbappé & Home/Away</p>
             </div>
-            <div class="folder-card" id="folder-barcelona" onclick="openFolder('barcelona', 'Barcelona Folder (Yamal & Messi)', this)">
+            <div class="folder-card" id="folder-barcelona" onclick="openFolder('barcelona', 'Barcelona Folder Mockups', this)">
                 <i class="fas fa-folder"></i>
                 <h4>Barcelona</h4>
-                <p>Yamal & Messi</p>
+                <p>Yamal & Messi Editions</p>
             </div>
-            <div class="folder-card" id="folder-juventus" onclick="openFolder('juventus', 'Juventus Folder (Ronaldo Classic)', this)">
+            <div class="folder-card" id="folder-juventus" onclick="openFolder('juventus', 'Juventus Folder Mockups', this)">
                 <i class="fas fa-folder"></i>
                 <h4>Juventus</h4>
-                <p>Ronaldo Classic</p>
+                <p>Ronaldo Classic Striped</p>
             </div>
-            <div class="folder-card" id="folder-mancity" onclick="openFolder('mancity', 'Manchester City Folder (Haaland #9)', this)">
+            <div class="folder-card" id="folder-mancity" onclick="openFolder('mancity', 'Manchester City Folder Mockups', this)">
                 <i class="fas fa-folder"></i>
                 <h4>Manchester City</h4>
-                <p>Haaland #9 Edition</p>
+                <p>Haaland #9 Sky Blue</p>
             </div>
-            <div class="folder-card" id="folder-national" onclick="openFolder('national', 'National Teams Folder (Portugal & Argentina)', this)">
+            <div class="folder-card" id="folder-national" onclick="openFolder('national', 'National Teams Folder Mockups', this)">
                 <i class="fas fa-folder"></i>
                 <h4>National Teams</h4>
-                <p>Portugal & Argentina</p>
+                <p>Argentina & Portugal</p>
             </div>
         </div>
 
         <!-- Active Folder Status Banner -->
         <div class="active-folder-banner">
             <div>
-                <small>Currently Open Folder:</small>
-                <div><span id="currentFolderName">All Kits - Complete Range</span></div>
+                <small>Active Folder Loaded:</small>
+                <div><span id="currentFolderName">All Folders Kits - Complete Range</span></div>
             </div>
             <i class="fas fa-folder-open" style="color: var(--gold); font-size: 24px;"></i>
         </div>
 
-        <!-- Products / Kits Section -->
-        <div class="section-title" style="margin-top: 30px;">
-            <h3>Top Selling <span>Star Kits</span></h3>
-            <p>Aik click par WhatsApp par order confirm karein!</p>
-        </div>
-
+        <!-- Mockups Products Grid -->
         <div class="products-grid" id="productGrid">
             
-            <!-- Real Madrid - Mbappé -->
+            <!-- Real Madrid 1 -->
             <div class="product-card" data-category="realmadrid">
-                <img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&w=600&q=80" alt="Real Madrid Mbappé Kit" class="product-image">
+                <img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&w=600&q=80" alt="Real Madrid Home Kit" class="product-image">
                 <div class="product-info">
                     <div>
-                        <div class="product-tag">Real Madrid Folder • Home Kit</div>
-                        <h4 class="product-title">Real Madrid Official Kit</h4>
+                        <div class="product-tag">Real Madrid Folder • Home Mockup</div>
+                        <h4 class="product-title">Real Madrid Home Sublimation Kit</h4>
                         <div class="player-badge"><i class="fas fa-star"></i> Star Print: MBAPPÉ - 10</div>
                         <ul class="product-features">
-                            <li>✓ Official Crest & Sublimation Design</li>
-                            <li>✓ High-Performance Dri-FIT Fabric</li>
-                            <li>✓ Sizes: S, M, L, XL available</li>
+                            <li>✓ High-Definition Sublimation Print</li>
+                            <li>✓ Premium Micro-Interlock Fabric</li>
+                            <li>✓ Full Customization Available</li>
                         </ul>
                     </div>
                     <div class="product-footer">
                         <span class="price">Rs. 2,499</span>
-                        <a href="https://wa.me/923224312356?text=Assalam-o-Alaikum,%20I%20want%20to%20order%20Real%20Madrid%20Kit%20with%20MBAPPE%2010." target="_blank" class="order-btn">
+                        <a href="https://wa.me/923224312356?text=Assalam-o-Alaikum,%20I%20want%20to%20order%20Real%20Madrid%20Home%20Kit%20with%20MBAPPE%2010." target="_blank" class="order-btn">
                             <i class="fab fa-whatsapp"></i> Order Now
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Barcelona - Lamine Yamal -->
-            <div class="product-card" data-category="barcelona">
-                <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=600&q=80" alt="Barcelona Yamal Kit" class="product-image">
+            <!-- Real Madrid 2 -->
+            <div class="product-card" data-category="realmadrid">
+                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=600&q=80" alt="Real Madrid Away Kit" class="product-image">
                 <div class="product-info">
                     <div>
-                        <div class="product-tag">Barcelona Folder • Home Kit</div>
+                        <div class="product-tag">Real Madrid Folder • Away Mockup</div>
+                        <h4 class="product-title">Real Madrid Away Special Kit</h4>
+                        <div class="player-badge"><i class="fas fa-star"></i> Star Print: VINI JR - 7</div>
+                        <ul class="product-features">
+                            <li>✓ Premium Gold Accent Piping</li>
+                            <li>✓ Breathable Athletic Mesh</li>
+                            <li>✓ Sizes: S, M, L, XL, XXL</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <span class="price">Rs. 2,499</span>
+                        <a href="https://wa.me/923224312356?text=Assalam-o-Alaikum,%20I%20want%20to%20order%20Real%20Madrid%20Away%20Kit%20with%20VINI%20JR%207." target="_blank" class="order-btn">
+                            <i class="fab fa-whatsapp"></i> Order Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Barcelona 1 -->
+            <div class="product-card" data-category="barcelona">
+                <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=600&q=80" alt="Barcelona Home Kit" class="product-image">
+                <div class="product-info">
+                    <div>
+                        <div class="product-tag">Barcelona Folder • Home Mockup</div>
                         <h4 class="product-title">FC Barcelona Blaugrana Kit</h4>
                         <div class="player-badge"><i class="fas fa-star"></i> Star Print: L. YAMAL - 19</div>
                         <ul class="product-features">
-                            <li>✓ Classic Blaugrana Sublimation</li>
+                            <li>✓ Vibrant Blaugrana Sublimation Design</li>
                             <li>✓ Pro Player Edition Material</li>
-                            <li>✓ Sizes: S, M, L, XL available</li>
+                            <li>✓ Superior Sweat-Wicking Tech</li>
                         </ul>
                     </div>
                     <div class="product-footer">
@@ -564,18 +581,41 @@
                 </div>
             </div>
 
-            <!-- Juventus - Ronaldo -->
-            <div class="product-card" data-category="juventus">
-                <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=600&q=80" alt="Juventus Ronaldo Kit" class="product-image">
+            <!-- Barcelona 2 -->
+            <div class="product-card" data-category="barcelona">
+                <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=600&q=80" alt="Barcelona Classic Kit" class="product-image">
                 <div class="product-info">
                     <div>
-                        <div class="product-tag">Juventus Folder • Classic Edition</div>
-                        <h4 class="product-title">Juventus Black & White Kit</h4>
+                        <div class="product-tag">Barcelona Folder • Legend Mockup</div>
+                        <h4 class="product-title">Barcelona Legend Retro Edition</h4>
+                        <div class="player-badge"><i class="fas fa-star"></i> Star Print: MESSI - 10</div>
+                        <ul class="product-features">
+                            <li>✓ Classic Retro Sublimation Layout</li>
+                            <li>✓ High-Resolution Vector Crest</li>
+                            <li>✓ Sizes: S, M, L, XL available</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <span class="price">Rs. 2,699</span>
+                        <a href="https://wa.me/923224312356?text=Assalam-o-Alaikum,%20I%20want%20to%20order%20Barcelona%20Retro%20Kit%20with%20MESSI%2010." target="_blank" class="order-btn">
+                            <i class="fab fa-whatsapp"></i> Order Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Juventus 1 -->
+            <div class="product-card" data-category="juventus">
+                <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=600&q=80" alt="Juventus Home Kit" class="product-image">
+                <div class="product-info">
+                    <div>
+                        <div class="product-tag">Juventus Folder • Home Mockup</div>
+                        <h4 class="product-title">Juventus Black & White Stripe Kit</h4>
                         <div class="player-badge"><i class="fas fa-star"></i> Star Print: RONALDO - 7</div>
                         <ul class="product-features">
-                            <li>✓ Legendary Striped Sublimation</li>
-                            <li>✓ Breathable Mesh Paneling</li>
-                            <li>✓ Sizes: S, M, L, XL available</li>
+                            <li>✓ Bold Striped Sublimation Graphic</li>
+                            <li>✓ Light-Weight Comfort Weave</li>
+                            <li>✓ Full Custom Names & Numbers</li>
                         </ul>
                     </div>
                     <div class="product-footer">
@@ -587,17 +627,17 @@
                 </div>
             </div>
 
-            <!-- Manchester City - Haaland -->
+            <!-- Manchester City 1 -->
             <div class="product-card" data-category="mancity">
-                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=600&q=80" alt="Manchester City Haaland Kit" class="product-image">
+                <img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?auto=format&fit=crop&w=600&q=80" alt="Manchester City Kit" class="product-image">
                 <div class="product-info">
                     <div>
-                        <div class="product-tag">Manchester City Folder • Home Kit</div>
-                        <h4 class="product-title">Manchester City Sky Blue Kit</h4>
+                        <div class="product-tag">Manchester City Folder • Home Mockup</div>
+                        <h4 class="product-title">Manchester City Sky Blue Edition</h4>
                         <div class="player-badge"><i class="fas fa-star"></i> Star Print: HAALAND - 9</div>
                         <ul class="product-features">
-                            <li>✓ Official Sky Blue Sublimation</li>
-                            <li>✓ High-Grade Athletic Fabric</li>
+                            <li>✓ Official Sky Blue Sublimation Tone</li>
+                            <li>✓ Premium Anti-Sweat Fabric</li>
                             <li>✓ Sizes: S, M, L, XL available</li>
                         </ul>
                     </div>
@@ -610,17 +650,17 @@
                 </div>
             </div>
 
-            <!-- Argentina - Messi -->
+            <!-- National Teams 1 -->
             <div class="product-card" data-category="national">
-                <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=600&q=80" alt="Argentina Messi Kit" class="product-image">
+                <img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&w=600&q=80" alt="Argentina Kit" class="product-image">
                 <div class="product-info">
                     <div>
-                        <div class="product-tag">National Teams Folder • Champions</div>
-                        <h4 class="product-title">Argentina 3-Star Champion Kit</h4>
+                        <div class="product-tag">National Teams Folder • Champion Mockup</div>
+                        <h4 class="product-title">Argentina 3-Star World Champion Kit</h4>
                         <div class="player-badge"><i class="fas fa-star"></i> Star Print: MESSI - 10</div>
                         <ul class="product-features">
-                            <li>✓ Sky Blue & White Stripes</li>
-                            <li>✓ Official 3-Star Gold Crest</li>
+                            <li>✓ Authentic 3-Star Gold Crest Printing</li>
+                            <li>✓ Professional Sublimation Finish</li>
                             <li>✓ Sizes: S, M, L, XL available</li>
                         </ul>
                     </div>
@@ -633,18 +673,18 @@
                 </div>
             </div>
 
-            <!-- Portugal - Ronaldo -->
+            <!-- National Teams 2 -->
             <div class="product-card" data-category="national">
-                <img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?auto=format&fit=crop&w=600&q=80" alt="Portugal Ronaldo Kit" class="product-image">
+                <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=600&q=80" alt="Portugal Kit" class="product-image">
                 <div class="product-info">
                     <div>
-                        <div class="product-tag">National Teams Folder • Trending</div>
-                        <h4 class="product-title">Portugal Home Official Kit</h4>
+                        <div class="product-tag">National Teams Folder • Trending Mockup</div>
+                        <h4 class="product-title">Portugal Maroon & Gold Kit</h4>
                         <div class="player-badge"><i class="fas fa-star"></i> Star Print: CRISTIANO - 7</div>
                         <ul class="product-features">
-                            <li>✓ Vibrant Maroon & Gold</li>
-                            <li>✓ Sweat-Wicking Tech Fabric</li>
-                            <li>✓ Sizes: S, M, L, XL available</li>
+                            <li>✓ Rich Maroon Sublimation Shade</li>
+                            <li>✓ High-Performance Athletic Build</li>
+                            <li>✓ Full Customization Support</li>
                         </ul>
                     </div>
                     <div class="product-footer">
@@ -662,15 +702,15 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 <span class="brand-name">4 Star Soccer PK</span>. All Rights Reserved.</p>
-        <p>Official Team Folders, Sublimation Jerseys & Custom Football Kits Manufacturer, Pakistan.</p>
+        <p>Official Team Folders, Sublimation Mockups & Custom Football Kits Manufacturer, Pakistan.</p>
     </footer>
 
     <!-- Floating WhatsApp -->
-    <a href="https://wa.me/923224312356?text=Hi%204%20Star%20Soccer%20PK,%20I%20need%20help%20with%20custom%20kit%20ordering." target="_blank" class="whatsapp-float">
+    <a href="https://wa.me/923224312356?text=Hi%204%20Star%20Soccer%20PK,%20I%20need%20help%20with%20custom%20kit%20mockups." target="_blank" class="whatsapp-float">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- JavaScript for Open Folder Logic -->
+    <!-- JavaScript for Dynamic Folder Opening -->
     <script>
         function openFolder(category, folderName, element) {
             // Update active folder styling
@@ -688,7 +728,7 @@
             // Update folder banner text
             document.getElementById('currentFolderName').innerText = folderName;
 
-            // Filter products
+            // Filter products / mockups inside the folder
             const products = document.querySelectorAll('.product-card');
             products.forEach(product => {
                 if (category === 'all' || product.getAttribute('data-category') === category) {
