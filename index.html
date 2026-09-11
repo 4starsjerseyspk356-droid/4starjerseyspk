@@ -1,49 +1,196 @@
-<div class="product-card">
-    <div class="badge">WORLD CHAMPIONS</div>
-    <div class="product-image">
-        <img src="images/messi-jersey.jpg" alt="Messi Argentina National Team Jersey">
-    </div>
-    <div class="product-info">
-        <span class="category">ARGENTINA • 2026 EDITION</span>
-        <h3>Messi Argentina National Team Jersey</h3>
-        <div class="price">Rs 1699</div>
-        <p class="description">Premium sublimation-printed football shirt crafted from lightweight, breathable fabric for all-day comfort.</p>
-        <ul class="features">
-            <li>✓ Breathable & lightweight quick-dry polyester</li>
-            <li>✓ 3 Year Wash Guarantee</li>
-            <li>✓ Delivery time: 7 working days (COD)</li>
-        </ul>
-        
-        <!-- SIZES SECTION: New Born to 5XL -->
-        <div class="size-section">
-            <label>SIZE</label>
-            <div class="size-options">
-                <button type="button">New Born</button>
-                <button type="button">4-5Y</button>
-                <button type="button">S</button>
-                <button type="button">M</button>
-                <button type="button">L</button>
-                <button type="button">XL</button>
-                <button type="button">2XL</button>
-                <button type="button">3XL</button>
-                <button type="button">4XL</button>
-                <button type="button">5XL</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legends Sports Hosiery - Jerseys</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .product-card {
+            background-color: #1a1a1a;
+            border: 2px solid #ffd700;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 380px;
+            padding: 20px;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
+        }
+        .badge {
+            background-color: #ffd700;
+            color: #000;
+            font-weight: bold;
+            font-size: 11px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+        .product-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+        .category {
+            font-size: 11px;
+            color: #aaa;
+            letter-spacing: 1px;
+        }
+        h3 {
+            font-size: 18px;
+            margin: 6px 0 12px 0;
+            color: #fff;
+        }
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffd700;
+            margin-bottom: 12px;
+        }
+        .description {
+            font-size: 13px;
+            color: #ccc;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        .features {
+            list-style: none;
+            font-size: 12px;
+            color: #ddd;
+            margin-bottom: 16px;
+        }
+        .features li {
+            margin-bottom: 4px;
+        }
+        label {
+            font-size: 11px;
+            font-weight: bold;
+            color: #aaa;
+            display: block;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+        .size-section, .sleeve-section {
+            margin-bottom: 16px;
+        }
+        .size-options {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 6px;
+        }
+        .size-options button, .sleeve-options button {
+            background-color: #2a2a2a;
+            color: #fff;
+            border: 1px solid #444;
+            padding: 6px 2px;
+            font-size: 11px;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            transition: 0.2s;
+        }
+        .size-options button:hover, .sleeve-options button:hover, .sleeve-options button.active {
+            background-color: #ffd700;
+            color: #000;
+            border-color: #ffd700;
+            font-weight: bold;
+        }
+        .sleeve-options {
+            display: flex;
+            gap: 8px;
+        }
+        .sleeve-options button {
+            flex: 1;
+            padding: 8px;
+            font-size: 12px;
+        }
+        .addons-section {
+            border-top: 1px dashed #444;
+            padding-top: 12px;
+            margin-top: 12px;
+        }
+        .addons-section label {
+            display: flex;
+            align-items: center;
+            color: #ddd;
+            font-size: 12px;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+        .addons-section input[type="checkbox"] {
+            margin-right: 8px;
+            accent-color: #ffd700;
+            width: 16px;
+            height: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="product-card">
+        <div class="badge">WORLD CHAMPIONS</div>
+        <div class="product-image">
+            <img src="images/messi-jersey.jpg" alt="Messi Argentina National Team Jersey">
+        </div>
+        <div class="product-info">
+            <span class="category">ARGENTINA • 2026 EDITION</span>
+            <h3>Messi Argentina National Team Jersey</h3>
+            <div class="price">Rs 1699</div>
+            <p class="description">Premium sublimation-printed football shirt crafted from lightweight, breathable fabric for all-day comfort.</p>
+            <ul class="features">
+                <li>✓ Breathable & lightweight quick-dry polyester</li>
+                <li>✓ 3 Year Wash Guarantee</li>
+                <li>✓ Delivery time: 7 working days (COD)</li>
+            </ul>
+            
+            <!-- SIZES SECTION: New Born to 5XL -->
+            <div class="size-section">
+                <label>SIZE</label>
+                <div class="size-options">
+                    <button type="button">New Born</button>
+                    <button type="button">4-5Y</button>
+                    <button type="button">S</button>
+                    <button type="button">M</button>
+                    <button type="button">L</button>
+                    <button type="button">XL</button>
+                    <button type="button">2XL</button>
+                    <button type="button">3XL</button>
+                    <button type="button">4XL</button>
+                    <button type="button">5XL</button>
+                </div>
+            </div>
+
+            <!-- SLEEVE SECTION -->
+            <div class="sleeve-section">
+                <label>SLEEVE</label>
+                <div class="sleeve-options">
+                    <button type="button" class="active">Half Sleeve</button>
+                    <button type="button">Full Sleeve</button>
+                </div>
+            </div>
+
+            <!-- ADD-ONS -->
+            <div class="addons-section">
+                <label><input type="checkbox"> Add Matching Shorts (Nikker) (+Rs. 1000)</label>
+                <label><input type="checkbox"> Add Custom Name & Number (+Rs. 300)</label>
             </div>
         </div>
-
-        <!-- SLEEVE SECTION -->
-        <div class="sleeve-section">
-            <label>SLEEVE</label>
-            <div class="sleeve-options">
-                <button type="button" class="active">Half Sleeve</button>
-                <button type="button">Full Sleeve</button>
-            </div>
-        </div>
-
-        <!-- ADD-ONS -->
-        <div class="addons-section">
-            <label><input type="checkbox"> Add Matching Shorts (Nikker) (+Rs. 1000)</label>
-            <label><input type="checkbox"> Add Custom Name & Number (+Rs. 300)</label>
-        </div>
     </div>
-</div>
+
+</body>
+</html>
