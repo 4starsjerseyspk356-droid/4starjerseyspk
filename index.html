@@ -3,182 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legends Sports Hosiery - Pro Soccer Jerseys</title>
+    <title>Legends Sports Hosiery - 4Star Soccer Kits</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
+        :root {
+            --primary-color: #111;
+            --accent-color: #f39c12;
+            --whatsapp-color: #25D366;
+            --bg-color: #f9f9f9;
         }
         body {
-            /* Professional Soccer Stadium / High-end Dark Background */
-            background: linear-gradient(135deg, #0b0f19 0%, #111827 50%, #1f2937 100%);
-            color: #ffffff;
-            min-height: 100vh;
-            padding: 40px 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: #333;
         }
         header {
-            text-align: center;
-            margin-bottom: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         header h1 {
-            font-size: 32px;
-            color: #ffd700;
-            letter-spacing: 2px;
-            margin-bottom: 8px;
-            text-transform: uppercase;
+            margin: 0;
+            font-size: 24px;
+            color: var(--accent-color);
         }
-        header p {
-            color: #9ca3af;
-            font-size: 14px;
+        .policy-banner {
+            background-color: #fff3cd;
+            color: #856404;
+            text-align: center;
+            padding: 12px;
+            font-weight: bold;
+            border-bottom: 1px solid #ffeeba;
         }
         .container {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .section-title h2 {
+            font-size: 32px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
         }
-        .product-card {
-            background: rgba(26, 26, 26, 0.9);
-            border: 2px solid #374151;
-            border-radius: 16px;
-            padding: 20px;
-            position: relative;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease, border-color 0.3s ease;
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-        .product-card:hover {
-            border-color: #ffd700;
+        .card:hover {
             transform: translateY(-5px);
         }
-        .badge {
-            background-color: #ffd700;
-            color: #000;
-            font-weight: bold;
-            font-size: 10px;
-            padding: 5px 10px;
-            border-radius: 6px;
-            display: inline-block;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .product-image {
-            background: #000;
-            border-radius: 10px;
-            overflow: hidden;
-            margin-bottom: 15px;
-            height: 240px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid #2d3748;
-        }
-        .product-image img {
+        .card img {
             width: 100%;
-            height: 100%;
+            height: 320px;
             object-fit: cover;
         }
-        .category {
-            font-size: 11px;
-            color: #9ca3af;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
+        .card-content {
+            padding: 20px;
         }
-        h3 {
-            font-size: 18px;
-            margin: 6px 0 10px 0;
-            color: #fff;
+        .card-content h3 {
+            margin: 0 0 10px 0;
+            font-size: 20px;
         }
-        .price {
-            font-size: 22px;
-            font-weight: bold;
-            color: #ffd700;
-            margin-bottom: 12px;
+        .card-content p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
         }
-        .description {
-            font-size: 13px;
-            color: #d1d5db;
-            margin-bottom: 12px;
-            line-height: 1.5;
-        }
-        .features {
-            list-style: none;
-            font-size: 12px;
-            color: #9ca3af;
-            margin-bottom: 16px;
-            border-bottom: 1px solid #374151;
-            padding-bottom: 12px;
-        }
-        .features li {
-            margin-bottom: 5px;
-        }
-        label {
-            font-size: 11px;
-            font-weight: bold;
-            color: #9ca3af;
+        .whatsapp-btn {
             display: block;
-            margin-bottom: 6px;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
-        .size-section, .sleeve-section {
-            margin-bottom: 16px;
-        }
-        .size-options {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 5px;
-        }
-        .size-options button, .sleeve-options button {
-            background-color: #1f2937;
-            color: #fff;
-            border: 1px solid #4b5563;
-            padding: 8px 2px;
-            font-size: 10px;
-            font-weight: bold;
-            border-radius: 6px;
-            cursor: pointer;
+            background-color: var(--whatsapp-color);
+            color: white;
             text-align: center;
-            transition: 0.2s;
+            padding: 12px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.2s;
         }
-        .size-options button:hover, .sleeve-options button:hover, .size-options button.active, .sleeve-options button.active {
-            background-color: #ffd700;
-            color: #000;
-            border-color: #ffd700;
+        .whatsapp-btn:hover {
+            background-color: #1ebe5d;
         }
-        .sleeve-options {
-            display: flex;
-            gap: 8px;
-        }
-        .sleeve-options button {
-            flex: 1;
-            padding: 10px;
-            font-size: 11px;
-        }
-        .addons-section {
-            border-top: 1px dashed #374151;
-            padding-top: 12px;
-            margin-top: 12px;
-        }
-        .addons-section label {
-            display: flex;
-            align-items: center;
-            color: #e5e7eb;
-            font-size: 12px;
-            margin-bottom: 8px;
-            cursor: pointer;
-            text-transform: none;
-            font-weight: normal;
-        }
-        .addons-section input[type="checkbox"] {
-            margin-right: 10px;
-            accent-color: #ffd700;
-            width: 18px;
-            height: 18px;
-            cursor: pointer;
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
         }
     </style>
 </head>
@@ -186,159 +115,86 @@
 
     <header>
         <h1>Legends Sports Hosiery</h1>
-        <p>Explore World Cup & Top League Pro Sublimation Kits (New Born to 5XL)</p>
+        <p>Custom Sublimation & Vector Design Experts</p>
     </header>
 
+    <!-- 30% Advance Policy Banner -->
+    <div class="policy-banner">
+        ⚠️ Important Notice: 30% Advance Payment is mandatory to confirm all custom jersey orders. Remaining payment upon delivery!
+    </div>
+
     <div class="container">
-        <!-- Product 1: Argentina (FIFA World Cup) -->
-        <div class="product-card">
-            <div class="badge">World Champions • FIFA</div>
-            <div class="product-image">
-                <!-- Mockup path example: images/fifa-world-cup/messi-argentina.jpg -->
-                <img src="images/fifa-world-cup/messi-argentina.jpg" alt="Messi Argentina National Team Jersey">
-            </div>
-            <div class="product-info">
-                <span class="category">Argentina • 2026 Edition</span>
-                <h3>Messi Argentina National Team Jersey</h3>
-                <div class="price">Rs 1699</div>
-                <p class="description">Premium sublimation-printed football shirt crafted from lightweight, breathable fabric for all-day comfort.</p>
-                <ul class="features">
-                    <li>✓ Breathable & lightweight quick-dry polyester</li>
-                    <li>✓ 3 Year Wash Guarantee</li>
-                    <li>✓ Delivery time: 7 working days (COD)</li>
-                </ul>
-                
-                <div class="size-section">
-                    <label>Select Size</label>
-                    <div class="size-options">
-                        <button type="button">New Born</button>
-                        <button type="button">4-5Y</button>
-                        <button type="button">S</button>
-                        <button type="button">M</button>
-                        <button type="button" class="active">L</button>
-                        <button type="button">XL</button>
-                        <button type="button">2XL</button>
-                        <button type="button">3XL</button>
-                        <button type="button">4XL</button>
-                        <button type="button">5XL</button>
-                    </div>
-                </div>
-
-                <div class="sleeve-section">
-                    <label>Select Sleeve</label>
-                    <div class="sleeve-options">
-                        <button type="button" class="active">Half Sleeve</button>
-                        <button type="button">Full Sleeve</button>
-                    </div>
-                </div>
-
-                <div class="addons-section">
-                    <label><input type="checkbox"> Add Matching Shorts (Nikker) (+Rs. 1000)</label>
-                    <label><input type="checkbox"> Add Custom Name & Number (+Rs. 300)</label>
-                </div>
-            </div>
+        <div class="section-title">
+            <h2>4Star Soccer Jersey Collection 2026</h2>
+            <p>High-quality sublimation kits with custom names and numbers.</p>
         </div>
 
-        <!-- Product 2: Real Madrid (La Liga - Elite Edition) -->
-        <div class="product-card">
-            <div class="badge">Hot Trend Seller • La Liga</div>
-            <div class="product-image">
-                <!-- Mockup path example: images/la-liga/real-madrid.jpg -->
-                <img src="images/la-liga/real-madrid.jpg" alt="Real Madrid Pro Sublimation Kit">
-            </div>
-            <div class="product-info">
-                <span class="category">Real Madrid • Elite Edition</span>
-                <h3>Real Madrid Pro Sublimation Kit</h3>
-                <div class="price">Rs 1699</div>
-                <p class="description">Professional vector-clean crest and sharp line details engineered with high-grade micro-mesh fabric.</p>
-                <ul class="features">
-                    <li>✓ Breathable & lightweight quick-dry polyester</li>
-                    <li>✓ 3 Year Wash Guarantee</li>
-                    <li>✓ Delivery time: 7 working days (COD)</li>
-                </ul>
-                
-                <div class="size-section">
-                    <label>Select Size</label>
-                    <div class="size-options">
-                        <button type="button">New Born</button>
-                        <button type="button">4-5Y</button>
-                        <button type="button">S</button>
-                        <button type="button">M</button>
-                        <button type="button">L</button>
-                        <button type="button" class="active">XL</button>
-                        <button type="button">2XL</button>
-                        <button type="button">3XL</button>
-                        <button type="button">4XL</button>
-                        <button type="button">5XL</button>
-                    </div>
-                </div>
-
-                <div class="sleeve-section">
-                    <label>Select Sleeve</label>
-                    <div class="sleeve-options">
-                        <button type="button" class="active">Half Sleeve</button>
-                        <button type="button">Full Sleeve</button>
-                    </div>
-                </div>
-
-                <div class="addons-section">
-                    <label><input type="checkbox"> Add Matching Shorts (Nikker) (+Rs. 1000)</label>
-                    <label><input type="checkbox"> Add Custom Name & Number (+Rs. 300)</label>
+        <div class="grid">
+            <!-- Product 1: Juventus Black Gold Kit -->
+            <div class="card">
+                <img src="Gemini_Generated_Image_rkxvderkxvderkxv.jpg" alt="Juventus Home Kit">
+                <div class="card-content">
+                    <h3>Juventus 23/24 Home Kit</h3>
+                    <p>Premium quality fabric, breathable & lightweight with custom player printing.</p>
+                    <a href="https://wa.me/923224312356?text=Hi,%20I%20want%20to%20order%20the%20Juventus%2023/24%20Kit.%20I%20understand%2030%%20advance%20is%20required." class="whatsapp-btn" target="_blank">Order on WhatsApp</a>
                 </div>
             </div>
-        </div>
 
-        <!-- Product 3: FC Barcelona (La Liga - Blaugrana) -->
-        <div class="product-card">
-            <div class="badge">Market Favorite • Premier</div>
-            <div class="product-image">
-                <!-- Mockup path example: images/premier-league/fc-barcelona.jpg -->
-                <img src="images/premier-league/fc-barcelona.jpg" alt="FC Barcelona Modern Trend Kit">
+            <!-- Product 2: Barcelona Black Gold Kit -->
+            <div class="card">
+                <img src="Gemini_Generated_Image_d4nl51d4nl51d4nl.jpg" alt="Barcelona Black Gold Kit">
+                <div class="card-content">
+                    <h3>Barcelona Custom Edition</h3>
+                    <p>Unique pattern design with high durability sublimation print.</p>
+                    <a href="https://wa.me/923224312356?text=Hi,%20I%20want%20to%20order%20the%20Barcelona%20Custom%20Edition%20Kit.%20I%20understand%2030%%20advance%20is%20required." class="whatsapp-btn" target="_blank">Order on WhatsApp</a>
+                </div>
             </div>
-            <div class="product-info">
-                <span class="category">FC Barcelona • Blaugrana</span>
-                <h3>FC Barcelona Modern Trend Kit</h3>
-                <div class="price">Rs 1699</div>
-                <p class="description">Vibrant high-contrast sublimation dye with ultra-lightweight athletic fit weave for ultimate performance.</p>
-                <ul class="features">
-                    <li>✓ Breathable & lightweight quick-dry polyester</li>
-                    <li>✓ 3 Year Wash Guarantee</li>
-                    <li>✓ Delivery time: 7 working days (COD)</li>
-                </ul>
-                
-                <div class="size-options-wrapper">
-                    <div class="size-section">
-                        <label>Select Size</label>
-                        <div class="size-options">
-                            <button type="button">New Born</button>
-                            <button type="button">4-5Y</button>
-                            <button type="button">S</button>
-                            <button type="button" class="active">M</button>
-                            <button type="button">L</button>
-                            <button type="button">XL</button>
-                            <button type="button">2XL</button>
-                            <button type="button">3XL</button>
-                            <button type="button">4XL</button>
-                            <button type="button">5XL</button>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="sleeve-section">
-                    <label>Select Sleeve</label>
-                    <div class="sleeve-options">
-                        <button type="button" class="active">Half Sleeve</button>
-                        <button type="button">Full Sleeve</button>
-                    </div>
+            <!-- Product 3: AC Milan Striped Kit -->
+            <div class="card">
+                <img src="Gemini_Generated_Image_3gon3u3gon3u3gon.jpg" alt="AC Milan Kit">
+                <div class="card-content">
+                    <h3>AC Milan Classic Kit</h3>
+                    <p>V-neck collar, stylish & comfortable classic vertical stripes.</p>
+                    <a href="https://wa.me/923224312356?text=Hi,%20I%20want%20to%20order%20the%20AC%20Milan%20Classic%20Kit.%20I%20understand%2030%%20advance%20is%20required." class="whatsapp-btn" target="_blank">Order on WhatsApp</a>
                 </div>
+            </div>
 
-                <div class="addons-section">
-                    <label><input type="checkbox"> Add Matching Shorts (Nikker) (+Rs. 1000)</label>
-                    <label><input type="checkbox"> Add Custom Name & Number (+Rs. 300)</label>
+            <!-- Product 4: Barcelona Blue Red Kit -->
+            <div class="card">
+                <img src="Gemini_Generated_Image_weou5oweou5oweou (2).jpg" alt="Barcelona Home Kit">
+                <div class="card-content">
+                    <h3>FC Barcelona Home Kit</h3>
+                    <p>Official stripe layout with custom player name and number option.</p>
+                    <a href="https://wa.me/923224312356?text=Hi,%20I%20want%20to%20order%20the%20FC%20Barcelona%20Home%20Kit.%20I%20understand%2030%%20advance%20is%20required." class="whatsapp-btn" target="_blank">Order on WhatsApp</a>
+                </div>
+            </div>
+
+            <!-- Product 5: Juventus Retro White/Black Kit -->
+            <div class="card">
+                <img src="Gemini_Generated_Image_fpd8e9fpd8e9fpd8.jpg" alt="Juventus Retro Kit">
+                <div class="card-content">
+                    <h3>Juventus 2018/19 Retro Kit</h3>
+                    <p>Climalite fabric with iconic Ronaldo 7 printing and crest embroidery.</p>
+                    <a href="https://wa.me/923224312356?text=Hi,%20I%20want%20to%20order%20the%20Juventus%20Retro%20Kit.%20I%20understand%2030%%20advance%20is%20required." class="whatsapp-btn`" target="_blank">Order on WhatsApp</a>
+                </div>
+            </div>
+
+            <!-- Product 6: FC Barcelona x Patta Special Edition -->
+            <div class="card">
+                <img src="Gemini_Generated_Image_tgjkk7tgjkk7tgjk.jpg" alt="Barcelona x Patta Kit">
+                <div class="card-content">
+                    <h3>FC Barcelona x Patta Special</h3>
+                    <p>'Bloodlines' graphic print with premium quality sublimation finish.</p>
+                    <a href="https://wa.me/923224312356?text=Hi,%20I%20want%20to%20order%20the%20Barcelona%20x%20Patta%20Kit.%20I%20understand%2030%%20advance%20is%20required." class="whatsapp-btn" target="_blank">Order on WhatsApp</a>
                 </div>
             </div>
         </div>
     </div>
+
+    <footer>
+        <p>&copy; 2026 Legends Sports Hosiery. All Rights Reserved. Contact: 03224312356</p>
+    </footer>
 
 </body>
 </html>
